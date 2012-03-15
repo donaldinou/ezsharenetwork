@@ -1,0 +1,39 @@
+
+EETETTTTETETTTEEEEETTETTETEETE
+TTETTETEETTTTTTEEETTEEETETETTE
+TTTE                      TTET
+EEEE                      TEET
+TETEEEET    EEE    ETETETETEET
+ETETTETT    EET         TEETET
+TTETTEET    TET         ETTETT
+ETTEETTT    TTT    ETEETETTETE
+EEETEEEE    TTT          TEETT
+ETEEETEE   EEEE          TETTE
+EETTEEEETTETTETTEETTTTETEETTEE
+TEETETETETTEEEEEETTTEETTETEEEE                     Technology-Everywhere.
+_________________________________________________________________________
+
+
+About eZ Advanced Autoload
+========================================================================
+  This extension provides a socialnetwork bar for templating in eZPublish.
+At this moment only addthis and sharethis plugins are managed.
+
+
+Requirements
+========================================================================
+  PHP 5.3.0 or above (for namespace and lsb)
+  eZPublish 4.4 or above (introduction of extension.xml elements)
+ 
+ 
+Install
+========================================================================
+  Please read the install file place under doc folder.
+
+  
+Technical notes
+========================================================================
+  You can see referrals links for addthis bellow:
+http://www.addthis.com/
+For sharethis you can go below:
+http://www.sharethis.com/

@@ -12,5 +12,8 @@
         <uses>
         	<extension name="ezjscore" />
         </uses>
+        <requires>
+            <extension name="ezextrafeatures" />
+        </requires>
     </dependencies>
 </software>

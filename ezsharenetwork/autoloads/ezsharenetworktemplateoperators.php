@@ -31,7 +31,7 @@ namespace extension\ezsharenetwork\autoloads {
          * @return array
          */
         public static function operators() {
-            return array(  );
+            return array( 'get_preferred_share_api', 'social_share_enabled' );
         }
     
         /**
@@ -74,6 +74,11 @@ namespace extension\ezsharenetwork\autoloads {
          */
         public function namedParameterList() {
             return array(
+                            'get_preferred_share_api' => array(
+                                            'fallback_value' => array( 'type' => 'string', 'required' => false, 'default' => 'addthis' )
+                            ),
+                            'social_share_enabled' => array(
+                            )
             );
         }
     
@@ -94,10 +99,71 @@ namespace extension\ezsharenetwork\autoloads {
          */
         public function modify( $tpl, $operatorName, $operatorParameters, $rootNamespace, $currentNamespace, &$operatorValue, array $namedParameters, $placement ) {
             switch ( $operatorName ) {
+                case 'get_preferred_share_api':
+                    $fallbackValue = null;
+                    if (!empty($namedParameters['fallback_value'])) {
+                        $fallbackValue = $namedParameters['fallback_value'];
+                    }
+                    $operatorValue = $this->getPreferredShareAPI($fallbackValue);
+                    break;
+                
+                case 'social_share_enabled':
+                    $operatorValue = $this->socialShareEnabled();
+                    break;
+                    
                 default:
                     // Nothing
                     break;
             }
+        }
+        
+        /**
+         * @brief Get the preferred social share API defined in ezsharenetwork.ini
+         * @details Get the preferred social share API defined in ezsharenetwork.ini
+         * If there is no social share define in ini file the $fallbackValue is return.
+         * By default $fallbackValue is addthis
+         *
+         * @param string $fallbackValue
+         * @return string
+         */
+        public function getPreferredShareAPI( $fallbackValue='addthis' ) {
+            // init vars
+            $inieZShare = \eZINI::instance( 'ezsharenetwork.ini' );
+        
+            // set preferred library
+            $result = $fallbackValue;
+            if ( $inieZShare->hasVariable( 'SocialShareNetwork', 'PreferredShareAPI') ) {
+                $result = $inieZShare->variable( 'SocialShareNetwork', 'PreferredShareAPI');
+            }
+        
+            // return value
+            return $result;
+        }
+        
+        /**
+         * @brief Return true if displaying social share bar is enabled
+         * @details Return true if displaying social share bar is enabled
+         * 
+         * @return boolean
+         */
+        public function socialShareEnabled() {
+            // init vars
+            $inieZShare = \eZINI::instance( 'ezsharenetwork.ini' );
+            $result = true;
+            
+            // get DisplaySocialShare constant
+            $displaySocialShare = 'enabled';
+            if ( $inieZShare->hasVariable( 'SocialShareNetwork', 'DisplaySocialShare') ) {
+                $displaySocialShare = $inieZShare->variable( 'SocialShareNetwork', 'DisplaySocialShare');
+            }
+            
+            // set the result
+            if ( $displaySocialShare == 'disabled' ) {
+                $result = false;
+            }
+            
+            // return value
+            return $result;
         }
     
     }

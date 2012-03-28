@@ -15,7 +15,6 @@ _________________________________________________________________________
 
 <2012-xx-yy>:
    * Add a socialbar datatype
-   * provide a json encode/decode methods for template parsing
-   * put some variable in a config file (addthis)
    * set the i18n
+   * addthis: manage ValidXHTML option
    * manual to explain how to create own social bar tools

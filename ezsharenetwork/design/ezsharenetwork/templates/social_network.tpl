@@ -1,7 +1,4 @@
-{def $social_network = 'addthis'}
-{if ezini_hasvariable('social_share', 'social_share_network', 'ezsharenetwork.ini')}
-	{set $social_network = ezini('social_share', 'social_share_network', 'ezsharenetwork.ini')}
-{/if}
+{def $social_network = get_preferred_share_api()}
 
 {switch match=$social_network}
 	{case match='addthis'}
@@ -11,7 +8,7 @@
 		{include uri='design:block/sharethis_social_network.tpl'}
 	{/case}
 	{case}
-		
+		{* Nothing *}
 	{/case}
 {/switch}
 

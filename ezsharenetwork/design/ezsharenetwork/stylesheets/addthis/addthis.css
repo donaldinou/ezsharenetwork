@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+#addthis_box .addthis_share_button {
+    /* define some style here */
+    cursor: pointer;
+}
+
+#addthis_box .addthis_share_button img.addthis_custom_image {
+    /* define some style here */
+    width: 16px;
+    height: 16px;
+    border-style: none;
+}
+
+#addthis_box .addthis_share_button span.addthis_custom_text {
+    /* define some style here */
+}

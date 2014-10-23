@@ -28,7 +28,11 @@ namespace extension\ezsharenetwork\datatypes\ezsharenetwork {
         public function attribute( $name ) {
             switch ($name) {
                 case 'social_bar':
-                    echo 'social_bar';
+                    return $this->socialBar;
+                break;
+
+                case 'buttons':
+                    return $this->buttons;
                 break;
 
                 default:

@@ -24,13 +24,13 @@ Requirements
 ========================================================================
   PHP 5.3.0 or above (for namespace and lsb)
   eZPublish 4.4 or above (introduction of extension.xml elements)
- 
- 
+
+
 Install
 ========================================================================
   Please read the install file place under doc folder.
 
-  
+
 Technical notes
 ========================================================================
   You can see referrals links for addthis bellow:

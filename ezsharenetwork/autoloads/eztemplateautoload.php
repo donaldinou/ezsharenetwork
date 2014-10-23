@@ -7,8 +7,8 @@ $eZTemplateOperatorArray = array();
 
 // eZShare
 $eZTemplateOperatorArray[] = array( 'script' => 'extension/ezsharenetwork/autoloads/ezsharenetworktemplateoperators.php',
-									'class' => 'extension\\ezsharenetwork\\autoloads\\eZShareNetworkTemplateOperators',
-									'operator_names' => eZShareNetworkTemplateOperators::operators()
+                                    'class' => 'extension\\ezsharenetwork\\autoloads\\eZShareNetworkTemplateOperators',
+                                    'operator_names' => eZShareNetworkTemplateOperators::operators()
 );
 
 // AddThis
@@ -16,5 +16,3 @@ $eZTemplateOperatorArray[] = array( 'script' => 'extension/ezsharenetwork/autolo
                                     'class' => 'extension\\ezsharenetwork\\autoloads\\eZAddThisTemplateOperators',
                                     'operator_names' => eZAddThisTemplateOperators::operators()
 );
-
-?>

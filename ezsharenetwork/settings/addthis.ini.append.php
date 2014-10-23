@@ -96,7 +96,7 @@ clean=true
 ;;;
 ; addthis_localize : Custom Translation
 ; http://support.addthis.com/customer/portal/articles/381241-custom-translation
-;;; 
+;;;
 [addthis_localize]
 share_caption=Bookmark and Share
 email_caption=Email a Friend

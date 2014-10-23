@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<software xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		  xsi:noNamespaceSchemaLocation="xml/xsd/extension.xsd">
+<software xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="xml/xsd/extension.xsd">
     <metadata>
         <name>eZ ShareNetwork</name>
         <version>1.0.0</version>
@@ -10,7 +10,7 @@
     </metadata>
     <dependencies>
         <uses>
-        	<extension name="ezjscore" />
+            <extension name="ezjscore" />
         </uses>
         <requires>
             <extension name="ezextrafeatures" />

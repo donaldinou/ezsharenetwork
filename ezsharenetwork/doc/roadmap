@@ -1,16 +1,16 @@
 
-EETETTTTETETTTEEEEETTETTETEETE
-TTETTETEETTTTTTEEETTEEETETETTE
-TTTE                      TTET
-EEEE                      TEET
-TETEEEET    EEE    ETETETETEET
-ETETTETT    EET         TEETET
-TTETTEET    TET         ETTETT
-ETTEETTT    TTT    ETEETETTETE
-EEETEEEE    TTT          TEETT
-ETEEETEE   EEEE          TETTE
-EETTEEEETTETTETTEETTTTETEETTEE
-TEETETETETTEEEEEETTTEETTETEEEE                     Technology-Everywhere.
+TETETETETETETETETETETETETETETE
+TETETETETETETETETETETETETETETE
+TETE                      TETE
+TETE                      TETE
+TETETETE    TET    ETETETETETE
+TETETETE    TET         ETETTE
+TETETETE    TET         ETETTE
+TETETETE    TET    ETETETETETE
+TETETETE    TET          ETETE
+TETETETE    TET          ETETE
+TETETETETETETETETETETETETETETE
+TETETETETETETETETETETETETETETE                     Technology-Everywhere.
 _________________________________________________________________________
 
 <2012-xx-yy>:
@@ -18,3 +18,7 @@ _________________________________________________________________________
    * set the i18n
    * addthis: manage ValidXHTML option
    * manual to explain how to create own social bar tools
+   * Ajax for refreshing list in ezsharenetwork/design/ezsharenetwork/templates/content/datatype/edit/ezsharenetwork.tpl (l: 57)
+   * fisnish eZShareNetworkType class
+   * eZScriptAddThisAPI & getAddThisAPI : use ezextrafeature
+   * initializeClassAttribute & validateClassAttributeHTTPInput... : throw custom exception

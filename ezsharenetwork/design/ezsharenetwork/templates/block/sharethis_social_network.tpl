@@ -12,12 +12,12 @@
 	{def $default_size    = ezini('options', 'default_size', 'sharethis.ini')}
 	{def $default_text    = ezini('options', 'default_text', 'sharethis.ini')}
 	{def $buttons         = ezini('buttons', 'sharethis_button', 'sharethis.ini')}
-	
+
 	{def $url=''}
 	{def $title=''}
 	{if is_set($url_toshare)}{set $url = $url_toshare}{/if}
 	{if is_set($title_toshare)}{set $title = $title_toshare}{/if}
-	
+
 	{* HTML begin *}
 	<div id="sharethis_box">
 	    {def $btn_size = $default_size}
@@ -78,8 +78,8 @@
 	{if is_set($display_text)}{undef $display_text}{/if}
 	{if is_set($url)}{undef $url}{/if}
 	{if is_set($title)}{undef $title}{/if}
-	
-	
+
+
 	{if and(ezini_hasvariable( 'colors', 'theme', 'sharethis.ini' ), ezini('colors', 'theme', 'sharethis.ini')|eq(0)|not())}
 	    {def $theme        = ezini('colors', 'theme', 'sharethis.ini')}
 	{/if}
@@ -98,7 +98,7 @@
 	{if ezini_hasvariable( 'options', 'popup', 'sharethis.ini' )}
 	    {def $popup  = ezini('options', 'popup', 'sharethis.ini')}
 	{/if}
-	
+
 	{* JS begin *}
 	<script type="text/javascript">var switchTo5x=true;</script>
 	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -125,8 +125,8 @@
 	{if is_set($offset_top)}{undef $offset_top}{/if}
 	{if is_set($offset_left)}{undef $offset_left}{/if}
 	{if is_set($colors)}{undef $colors}{/if}
-	
-	{def $authorized_lib = array( 'jquery' )}{* TODO: Manage authorized lib with file parsing helper in futur *}
+
+	{def $authorized_lib = array( 'jquery' )}
     {def $preferred_lib = ezini('eZJSCore', 'PreferredLibrary', 'ezjscore.ini')}{if $authorized_lib|contains( $preferred_lib )|not()}{set $preferred_lib = 'jquery'}{/if}
     {ezscript_require( array( concat( 'ezjsc::', $preferred_lib ), concat( 'ezjsc::', $preferred_lib, 'io' ), concat( 'sharethis_', $preferred_lib, '.js' ) ) )}
     {undef $authorized_lib $preferred_lib}
